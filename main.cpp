@@ -1,4 +1,4 @@
-#include "ConsoleEngine.h"
+#include "engine/ConsoleEngine.h"
 
 const int WIDTH = 50;
 const int HEIGHT = 12;
@@ -12,16 +12,16 @@ int main() {
   int ySpeed = 1;
   while (true) 
   {
-    if (x <= 1 || x >= WIDTH-1) {
+    if (x <= 1 || x+2 >= WIDTH-1) {
       xSpeed *= -1;
     }
-    if (y <= 0 || y >= HEIGHT-1) {
+    if (y <= 0 || y+1 >= HEIGHT-1) {
       ySpeed *= -1;
     }
     x+=xSpeed;
     y+=ySpeed;
     engine.background(' ');
-    engine.setPoint(x, y, '^');
+    engine.rect(x, y, 2, 2, 'X');
     engine.render();
     engine.clear(); 
     engine.delay(300);  

@@ -1,3 +1,3 @@
 default:
-	g++ *.cpp -o Game
+	g++ engine/*.cpp *.cpp -o Game
 	Game.exe
