@@ -21,7 +21,8 @@ int main() {
     x+=xSpeed;
     y+=ySpeed;
     engine.background(' ');
-    engine.rect(x, y, 2, 2, 'X');
+    engine.setPoint(0, 0, '+');
+    engine.rect(x, y, 3, 2, 'X');
     engine.render();
     engine.clear(); 
     engine.delay(300);  

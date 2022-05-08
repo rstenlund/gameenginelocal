@@ -4,14 +4,7 @@ ConsoleEngine::ConsoleEngine(int width, int height, bool border) {
   this->width = width;
   this->height = height;
   this->border = border;
-  this->points = new char*[this->height];
-  for(int i = 0; i < this->height; ++i)
-    this->points[i] = new char[this->width];
-  for (int y = 0; y < this->height; y++) {
-    for (int x = 0; x < this->width; x++) {
-      this->points[y][x] = '.';
-    }
-  }
+  points.resize(height, std::vector<char>(width, '.'));
 }
 
 void ConsoleEngine::render() {

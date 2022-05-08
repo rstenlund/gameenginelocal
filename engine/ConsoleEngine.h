@@ -9,7 +9,7 @@ private:
 int width, height;
 bool border;
 public:
-char **points;
+std::vector<std::vector<char>> points;
 ConsoleEngine(int width, int height, bool border);
 void render();
 void setPoint(int x, int y, char c);
