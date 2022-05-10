@@ -8,13 +8,15 @@ class ConsoleEngine {
 private:
 int width, height;
 bool border;
+char color = '#';
 public:
 std::vector<std::vector<char>> points;
 ConsoleEngine(int width, int height, bool border);
 void render();
-void setPoint(int x, int y, char c);
+void point(int x, int y);
 void clear();
 void background(char c);
 void delay(int ms);
-void rect(int x, int y, int width, int height, char c);
+void fill(char col);
+void rect(int x, int y, int width, int height);
 };
